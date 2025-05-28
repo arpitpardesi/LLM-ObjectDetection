@@ -20,7 +20,7 @@ while True:
     if not ret:
         break
 
-    results = model(frame, verbose=False)
+    results = model(frame, device=device,verbose=False)
     results[0].show()
 
     # Draw results on the frame

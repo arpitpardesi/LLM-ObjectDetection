@@ -1,22 +1,26 @@
 import time
 
 import cv2
+import torch
 from ultralytics import YOLO
 import ollama
 
-model = YOLO("yolov8m.pt")
+model = YOLO("yolov8x.pt")
 llmModel = "artifish/llama3.2-uncensored"
 
 cap = cv2.VideoCapture(0)
 last_prompt_time = 0
 cooldown = 5
 
+# Move to MPS device
+device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+
 while True:
     ret, frame = cap.read()
     if not ret:
         break
 
-    results = model(frame, verbose=False)
+    results = model(frame, verbose=False, device=device)
     # boxes = results[0].boxes
     # object_names = [model.names[int(cls)] for cls in boxes.cls] if boxes.id is not None else []
 
