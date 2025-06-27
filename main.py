@@ -2,11 +2,12 @@ import time
 
 import cv2
 import torch
+from deepface import DeepFace
 from ultralytics import YOLO
 import ollama
 
-model = YOLO("yolov8x.pt")
-llmModel = "artifish/llama3.2-uncensored"
+model = YOLO("yolov8l.pt")
+llmModel = "llama3.2"
 
 cap = cv2.VideoCapture(0)
 last_prompt_time = 0.0
@@ -25,7 +26,7 @@ while True:
     boxes = results[0].boxes
     object_names = []
 
-    if boxes is not None and boxes.cls is not None:
+    if boxes is not None and boxes.cls is not None and len(boxes.cls) > 0:
         for cls_id in boxes.cls:
             cls_int = int(cls_id.item())
             object_names.append(model.names[cls_int])
@@ -33,12 +34,46 @@ while True:
     # Draw results on the frame
     annotated_frame = results[0].plot()
 
+    try:
+        face_analysis = DeepFace.analyze(
+            img_path=frame,  # Pass full frame
+            actions=["age", "gender"],
+            enforce_detection=False
+        )
+
+        age_gender_info = []
+        for face in face_analysis:
+            age = face["age"]
+            gender = face["dominant_gender"]
+            age_gender_info.append(f"{gender}, {age} yrs")
+
+            # Draw text on face location
+            # x, y, w, h = face["region"].values()
+            region = face["region"]
+            x = region.get("x", 0)
+            y = region.get("y", 0)
+            w = region.get("w", 0)
+            h = region.get("h", 0)
+            cv2.rectangle(annotated_frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+            cv2.putText(annotated_frame, f"{gender}, {age} yrs", (x, y - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
+
+    except Exception as e:
+        print("Face analysis failed:", e)
+        age_gender_info = []
+
     current_time = time.time()
     if (current_time - last_prompt_time) > cooldown and object_names:
         unique_objects = sorted(set(object_names))
         object_list = ", ".join(unique_objects)
 
-        prompt = f"""From the list of detected objects: {object_list}, describe in one short sentence what is most likely happening in the scene. Be vivid, clear, and avoid guessing or uncertainty. Do not explain — just describe the scene."""
+        # prompt = f"""From the list of detected objects: {object_list}, describe in one short sentence what is most likely happening in the scene. Be vivid, clear, and avoid guessing or uncertainty. Do not explain — just describe the scene."""
+
+        prompt = (
+            f"Given these detected objects: {object_list}. "
+            "Briefly describe what is most likely happening in the scene in one vivid sentence. "
+            "Avoid guessing, speculation, or explanation. Just describe."
+        )
 
         response = ollama.chat(
             model=llmModel,

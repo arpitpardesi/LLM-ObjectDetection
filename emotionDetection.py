@@ -6,6 +6,7 @@ from ultralytics import YOLO
 model = YOLO("yolov8m.pt")
 
 cap = cv2.VideoCapture(0)
+emotion = None
 
 while True:
     ret, frame = cap.read()
