@@ -13,7 +13,7 @@ cap = cv2.VideoCapture(0)
 last_prompt_time = 0.0
 cooldown = 5.0
 
-# Move to MPS device
+# Ensure you have the required packages installed:
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 while True:
@@ -47,8 +47,7 @@ while True:
             gender = face["dominant_gender"]
             age_gender_info.append(f"{gender}, {age} yrs")
 
-            # Draw text on face location
-            # x, y, w, h = face["region"].values()
+            # Draw bounding box and label
             region = face["region"]
             x = region.get("x", 0)
             y = region.get("y", 0)
