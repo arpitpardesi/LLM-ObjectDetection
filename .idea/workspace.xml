@@ -1,33 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="776c595c-861a-49fa-91e7-e7b982a1d517" name="Changes" comment="" />
+    <list default="true" id="776c595c-861a-49fa-91e7-e7b982a1d517" name="Changes" comment="changes yolo model">
+      <change beforePath="$PROJECT_DIR$/.idea/ObjectDetectionLLM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ObjectDetectionLLM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;arpitpardesi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/arpitpardesi/LLM-ObjectDetection.git&quot;,
+    &quot;accountId&quot;: &quot;84d51715-e4e7-4929-b5a9-e98774e3d0fa&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2xBtHhxysvlSVj9lS1kFBslniKA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.emotionDetection.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.odGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.person.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torchTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-2ee2454479a3-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.122" />
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -39,6 +72,126 @@
       <option name="presentableId" value="Default" />
       <updated>1747423208765</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding Ollama model">
+      <option name="closed" value="true" />
+      <created>1747426826289</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747426826289</updated>
+    </task>
+    <task id="LOCAL-00002" summary="integrating ollama model">
+      <option name="closed" value="true" />
+      <created>1747505543179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747505543179</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Testing Emotion Detection using Deepface">
+      <option name="closed" value="true" />
+      <created>1747505620283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747505620283</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding requirements.txt">
+      <option name="closed" value="true" />
+      <created>1747505755978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747505755978</updated>
+    </task>
+    <task id="LOCAL-00005" summary="testing with pytorch">
+      <option name="closed" value="true" />
+      <created>1747513441490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747513441490</updated>
+    </task>
+    <task id="LOCAL-00006" summary="GUI with tkinkers">
+      <option name="closed" value="true" />
+      <created>1747599024109</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747599024109</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Integration with Torch for MBP">
+      <option name="closed" value="true" />
+      <created>1748443114504</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748443114504</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Integration with Torch for MBP">
+      <option name="closed" value="true" />
+      <created>1749494395726</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749494395726</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Integrated Gender, age and emotion detection">
+      <option name="closed" value="true" />
+      <created>1751057551114</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751057551114</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Integrated Gender, age and emotion detection">
+      <option name="closed" value="true" />
+      <created>1751189504881</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751189504881</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Integrated Gender, age and emotion detection">
+      <option name="closed" value="true" />
+      <created>1751314330099</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751314330099</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changes yolo model">
+      <option name="closed" value="true" />
+      <created>1751480392083</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751480392083</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding Ollama model" />
+    <MESSAGE value="integrating ollama model" />
+    <MESSAGE value="Testing Emotion Detection using Deepface" />
+    <MESSAGE value="Adding requirements.txt" />
+    <MESSAGE value="testing with pytorch" />
+    <MESSAGE value="GUI with tkinkers" />
+    <MESSAGE value="Integration with Torch for MBP" />
+    <MESSAGE value="Integrated Gender, age and emotion detection" />
+    <MESSAGE value="changes yolo model" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes yolo model" />
   </component>
 </project>

@@ -45,7 +45,11 @@ while True:
         for face in face_analysis:
             age = face["age"]
             gender = face["dominant_gender"]
-            age_gender_info.append(f"{gender}, {age} yrs")
+            emotion = face.get("dominant_emotion", "?")
+            age_gender_info.append(f"{gender}, {age} yrs, {emotion}")
+
+            object_names.append(gender)
+            # print(age, gender, emotion)
 
             # Draw bounding box and label
             region = face["region"]
