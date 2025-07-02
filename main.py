@@ -6,7 +6,7 @@ from deepface import DeepFace
 from ultralytics import YOLO
 import ollama
 
-model = YOLO("yolov8l.pt")
+model = YOLO("yolov8m.pt")
 llmModel = "llama3.2"
 
 cap = cv2.VideoCapture(0)
