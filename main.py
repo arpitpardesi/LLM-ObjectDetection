@@ -13,7 +13,6 @@ cap = cv2.VideoCapture(0)
 last_prompt_time = 0.0
 cooldown = 5.0
 
-# Ensure you have the required packages installed:
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 while True:
